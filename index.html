@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Leo Wang" />
+    <title>FC-FE Tech 百度商业平台研发部前端团队 - 基础技术组</title>
+    <link rel="stylesheet" type="text/css" href="src/resource/css/dep.less" />
+    <link rel="stylesheet" type="text/css" href="src/resource/css/common.less" />
+    <script src="dep/esl/esl.js"></script>
+    <script src="dep/google-code-prettify/prettify.js"></script>
+</head>
+<body>
+    <header id="header">
+        <h1 class="logo">
+            FC-FE Tech
+            <p>
+                百度商业平台研发部前端团队 - 基础技术组
+            </p>
+        </h1>
+        <nav>
+            <a href="#/overview">首页</a>
+            <a href="http://fe.baidu.com/doc/ecom/fengchao/standard" target="_blank">规范</a>
+            <a href="#/tool">脚手架</a>
+            <a href="#/experience">经验总结</a>
+            <a href="#/api">依赖框架API</a>
+            <a href="#/share">分享</a>
+        </nav>
+    </header>
+    <section id="main">
+        wewew<br />
+    </section>
+    <footer id="footer">
+        &copy; 百度商业平台研发部前端团队
+        <a href="http://github.com/fcfe" target="_blank" title="GitHub"><i class="fa fa-github-square"></i></a>
+        <a href="mailto:fc-fe@baidu.com" target="_blank" title="邮件"><i class="fa fa-envelope-o"></i></a>
+    </footer>
+    <script>
+    require.config({
+        'baseUrl': 'src',
+        'paths': {},
+        'packages': [
+            {
+                'name': 'er',
+                'location': '../dep/er/3.1.0-beta.3/src',
+                'main': 'main'
+            },
+            {
+                'name': 'etpl',
+                'location': '../dep/etpl/2.1.0/src',
+                'main': 'main'
+            },
+            {
+                'name': 'mini-event',
+                'location': '../dep/mini-event/1.0.0/src',
+                'main': 'main'
+            },
+            {
+                'name': 'esui',
+                'location': '../dep/esui/3.1.0-beta.3/src',
+                'main': 'main'
+            },
+            {
+                'name': 'moment',
+                'location': '../dep/moment/2.0.1/src',
+                'main': 'moment'
+            },
+            {
+                'name': 'underscore',
+                'location': '../dep/underscore/1.5.2/src',
+                'main': 'underscore'
+            }
+        ]
+    });
+    </script>
+
+</body>
+</html>
