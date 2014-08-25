@@ -1,0 +1,239 @@
+.page {
+    height: 100vh;
+    line-height: 30px;
+
+    &:nth-child(odd) {
+        background: #EEE;
+    }
+}
+
+.half-width {
+    width: 50%;
+    min-width: 1000px;
+}
+
+.center {
+    margin: 0 auto;
+}
+
+.oneux {
+    display: inline-block;
+}
+
+.weight-line {
+    height: 150px;
+    text-align: center;
+    line-height: 150px;
+}
+
+.page-number {
+    line-height: 50px;
+    font-size: 30px;
+    color: rgba(69,147,255,0.7);
+    font-style: italic;
+    font-weight: bold;
+}
+
+.larger {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+    padding: 0;
+    width: 560px;
+}
+
+.smaller {
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px 40px;
+    padding: 0;
+    width: 320px;
+}
+
+.image-container {
+    height: 60vh;
+    margin-top: 15vh;
+    background: url(../img/layout.png);
+    background-repeat: no-repeat;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 65px;
+    line-height: 70px;
+    white-space: pre-line;
+    letter-spacing: 0.1em;
+}
+
+.content {
+    line-height: 30px;
+    font-size: 14px;
+}
+
+.al {
+    text-align: left;
+    width: 100%;
+}
+
+.ar {
+    text-align: right;
+    display: inline-block;
+    width: 100%;
+
+    .page-number {
+        text-align: right;
+    }
+}
+
+.index-page {
+    font-size: 16px;
+    text-align: center;
+    background: rgba(69,147,255,0.7) !important;
+
+    .content {
+        padding: 150px 20px 10px;
+        color: #FFF;
+        .oneux {
+            font-size: 8em;
+            height: 100px;
+            display: inline-block;
+            border-bottom: 1px solid #FFF;
+        }
+    }
+
+    .solog {
+        line-height: 5em;
+        min-width: 350px;
+        margin: 0 auto;
+    }
+
+    .buttom {
+        cursor: pointer;
+        border: 1px solid #FFF;
+        display: inline-block;
+        text-align: center;
+        margin: 30px;
+        padding: 15px 60px;
+    }
+}
+
+.feature-page {
+    text-align: center;
+
+    .weight-line {
+        color: rgb(69,147,255);
+        font-size: 20px;
+    }
+
+    .cac(@nth: 0) {
+        background-position: -90px * @nth -90px * @nth;
+    }
+
+    .ul,
+    li {
+        list-style: none;
+        display: inline-block;
+    }
+
+    .item {
+        width: 125px;
+        height: 150px;
+        margin: 20px;
+    }
+
+    .role-name {
+        color: rgb(69,147,255);
+        font-size: 16px;
+        
+    }
+
+    .role-feature {
+        color: #CCC;
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .circle {
+        width: 90px;
+        height: 90px;
+        margin: 0 auto;
+        background: url(../img/feature.png);        
+    }
+
+    .item {
+        &:nth-child(1) {
+            .circle {
+                .cac(0);
+            }
+        }
+
+        &:nth-child(2) {
+            .circle {
+                .cac(1);
+            }
+        }
+
+        &:nth-child(3) {
+            .circle {
+                .cac(2);
+            }
+        }
+
+        &:nth-child(4) {
+            .circle {
+                .cac(3);
+            }
+        }
+
+        &:nth-child(5) {
+            .circle {
+                .cac(4);
+            }
+        }
+    }
+}
+
+.fonticon-page {
+    padding: 20px;
+    background-color: #EEE;
+    @left-width: 355px;
+    @item-width: 90px;
+    @item-height: 90px;
+
+    ul,
+    li {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    li {
+        display: inline-block;
+        width: @item-width;
+        height: @item-height;
+        text-align: center;
+    }
+
+    i {
+        font-size: 30px;
+        line-height: @item-width;
+    }
+
+    .font-icon-list {
+        background-color: #FFF;
+        border: 1px solid #CCC;
+    }
+}
+
+.esui-page {
+    .image-container {
+        background-image: url(../img/esui.png);
+    }
+}
+
+.application-page {
+    .image-container {
+        background-image: url(../img/application.png);
+    }
+}
+
