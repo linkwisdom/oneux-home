@@ -1,7 +1,7 @@
 {
-    "name": "onesite",
+    "name": "oneux-home",
     "version": "0.0.1",
-    "description": "",
+    "description": "oneux-home introduction",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,7 +14,10 @@
         "loaderUrl": "http://s1.bdstatic.com/r/www/cache/ecom/esl/1-8-0/esl.js",
         "dependencies": {}
     },
-    "dependencies": {},
-    "author": "wangkemiao@baidu.com",
+    "dependencies": {
+        "markdown": "0.5.0",
+        "etpl": "2.1.0"
+    },
+    "author": ["wangkemiao@baidu.com", "liuliandong01@baidu.com"],
     "license": "ISC"
 }

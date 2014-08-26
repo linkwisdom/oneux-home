@@ -2,11 +2,23 @@ exports.port = 8848;
 exports.directoryIndexes = true;
 exports.documentRoot = __dirname;
 
+var etpl = require('etpl');
+var systemConf = require('./systemConf');
+
+function parseTpl(context) {
+    var content = context.content.toString();
+    context.content = etpl.compile(content)(systemConf);
+}
+
 exports.getLocations = function () {
     return [
         { 
+            location: /\.(tpl|html)$/,
+            handler: [file(), parseTpl]
+        },
+        { 
             location: /\/$/, 
-            handler: home( 'index.html' )
+            handler: [ home( 'index.html' ), parseTpl ]
         },
         { 
             location: /^\/redirect-local/, 

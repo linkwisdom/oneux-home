@@ -3,36 +3,27 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="author" content="Leo Wang" />
-    <title>FC-FE Tech 百度商业平台研发部前端团队 - 基础技术组</title>
+    <title>${system.title}</title>
     <link rel="stylesheet" type="text/css" href="src/resource/css/dep.less" />
     <link rel="stylesheet" type="text/css" href="src/resource/css/common.less" />
+    <link rel="stylesheet" type="text/css" href="src/resource/css/page.less" />
     <script src="dep/esl/esl.js"></script>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
     <script src="dep/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="src/common/lib/scrollView.js"></script>
 </head>
 <body>
-    <header id="header">
-        <h1 class="logo">
-            FC-FE Tech
-            <p>
-                百度商业平台研发部前端团队 - 基础技术组
-            </p>
-        </h1>
-        <nav>
-            <a href="#/overview">首页</a>
-            <a href="http://blog.csdn.net/fengchao_fe" target="_blank">博客</a>
-            <a href="http://fe.baidu.com/doc/ecom/fengchao/standard" target="_blank">规范</a>
-            <a href="#/tool">脚手架</a>
-            <a href="#/api">依赖框架API</a>
-            <a href="#/share">分享</a>
-            <a href="#/share">OneUX</a>
-            <a href="http://github.com/fcfe" target="_blank">GitHub</a>
-        </nav>
-    </header>
-    <section id="main">
-        wewew<br />
-    </section>
+    <div id="main">
+        <!-- for: ${content.pages} as ${page},${index} -->
+        <section class="page ${page.id}-page" id="${page.id}">
+            <div data-url="${page.url}" class="loading-content">
+                ${page.title} is loading
+            </div>
+        </section>
+        <!-- /for -->
+    </div>
     <footer id="footer">
-        &copy;2014 百度商业平台研发部前端团队
+        &copy;2014 ${system.orgization}
         <p>
             <a href="http://github.com/fcfe" target="_blank" title="GitHub"><i class="fa fa-github-square"></i></a>
             <a href="mailto:fc-fe@baidu.com" target="_blank" title="邮件"><i class="fa fa-envelope-o"></i></a>
@@ -75,6 +66,8 @@
             }
         ]
     });
+
+    require(['main']);
     </script>
 
 </body>
