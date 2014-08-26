@@ -4,8 +4,10 @@ exports.system = {
     nav: {
         links: [
             { url: '#xxx', title: '首页' },
-            { url: '#xxx', title: 'github' },
-            { url: '#xxx', title: 'fengchao' }
+            { url: '#xxx', title: '规范' },
+            { url: '#xxx', title: '使用指南' },
+            { url: '#xxx', title: '应用场景' },
+            { url: '#xxx', title: '关于我们' }
         ]
     }
 };
