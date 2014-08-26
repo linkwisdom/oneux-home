@@ -5,6 +5,30 @@ exports.output = path.resolve( __dirname, 'output' );
 
 // var moduleEntries = 'html,htm,phtml,tpl,vm,js';
 // var pageEntries = 'html,htm,phtml,tpl,vm';
+// 
+
+
+var etpl = require('etpl');
+
+var systemConf = require('./systemConf');
+
+
+var homeBuilder = {
+    name: 'homeBuilder',
+    isExclude: function (file) {
+        if (file.extname == 'html') {
+            console.log(file.path);
+            return false;
+        }
+        return true;
+    },
+    process: function (file, context, callback) {
+        file.data = etpl.compile(file.data)(systemConf);
+        file.data = file.data.replace(/src\//g, 'asset/');
+        callback();
+    }
+};
+
 
 exports.getProcessors = function () {
     var lessProcessor = new LessCompiler();
@@ -15,7 +39,7 @@ exports.getProcessors = function () {
     var addCopyright = new AddCopyright();
 
     return {
-        'default': [ lessProcessor, moduleProcessor, pathMapperProcessor ],
+        'default': [lessProcessor, homeBuilder, pathMapperProcessor], //lessProcessor, moduleProcessor, pathMapperProcessor
         'release': [
             lessProcessor, cssProcessor, moduleProcessor,
             jsProcessor, pathMapperProcessor, addCopyright
