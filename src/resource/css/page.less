@@ -1,3 +1,5 @@
+@seaColor: rgba(69,147,255,0.7);
+
 body,
 #main {
     width: 100vw;
@@ -95,11 +97,40 @@ body,
 .index-page {
     font-size: 16px;
     text-align: center;
-    background: rgba(69,147,255,0.7) !important;
+    background: @seaColor !important;
 
     a {
         color: #EEE;
         margin: 10px;
+    }
+
+    .side-nav {
+        @readius: 15px;
+
+        position: fixed;
+        width: 50px;
+        right: 5%;
+        bottom: 20%;
+
+
+        a {
+            text-indent: 10000px;
+            width: @readius;
+            height: @readius;
+            border: 2px solid @seaColor;
+            background-color: #EEE; 
+            border-radius: @readius;
+            text-decoration: none;
+            display: inline-block;
+
+            &:hover {
+                text-indent: @readius;
+                color: #000;
+            }
+        }
+
+
+
     }
 
     .content {
@@ -151,6 +182,7 @@ body,
         width: 125px;
         height: 150px;
         margin: 20px;
+        vertical-align: top;
     }
 
     .role-name {

@@ -14,9 +14,9 @@
         <div class="solog">致力于商业体系的一致性体验</div>
         <div class="buttom">进入规范</div>
     </div>
-    <div>
+    <div class="side-nav">
         <!-- for: ${content.pages} as ${page},${index} -->
-            <a href="#${page.id}">${page.title}</a>
+            <a href="#${page.id}" title="${page.title}">${page.title}</a>
         <!-- /for -->
     </div>
 </div>

@@ -12,7 +12,7 @@ define( function (require, exports, module ) {
     var timeStamp = 0;
 
 
-    function updataPos() {
+    function updatePos() {
         cindex = index;
         prePos = document.body.scrollTop;
     }
@@ -24,8 +24,7 @@ define( function (require, exports, module ) {
         $(document).scroll(function (e) {
             var ht = document.body.scrollTop;
             var diff = ht - prePos;
-            prePos = ht;
-
+            
             if (e.timeStamp - timeStamp < 700) {
                 return;
             }
@@ -42,7 +41,7 @@ define( function (require, exports, module ) {
 
             $(pages.get(index)).scrollintoview({
                 duration: 500,
-                complete: updataPos
+                complete: updatePos
             });
         });
 
@@ -51,14 +50,14 @@ define( function (require, exports, module ) {
             var link = it.attr('href');
 
             var ht = document.body.scrollTop;
-            index = Math.ceil((ht + 50)/ vh) + 1;
+            index = Math.ceil(ht / vh) + 1;
 
             if (link.charAt(0) == '#') {
                 e.preventDefault();
                 $(link).scrollintoview(
                     {
                         duration: 500,
-                        complete: updataPos 
+                        complete: updatePos 
                     }
                 );
             }

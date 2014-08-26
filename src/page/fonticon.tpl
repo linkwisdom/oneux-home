@@ -4,9 +4,12 @@
         <h class="title al">关于
             fonticon</h>
         <div class="content">
-            一个字体文件包含了所有图标。Font Awesome 助你完整表达web页面上每个动作的含义。
-            一个字体文件包含了所有图标。Font Awesome 助你完整表达web页面上每个动作的含义。
-            一个字体文件包含了所有图标。Font Awesome 助你完整表达web页面上每个动作的含义。
+            <p>
+                <b>还在切图吗？你out啦</b> - oneux让你与切图说再见
+            </p>
+            <p>
+                <b>样式，想变就变</b> - 还在傻傻地做各种尺寸的icon吗？
+            </p>
         </div>
     </div>
     <ul class="font-icon-list larger">
