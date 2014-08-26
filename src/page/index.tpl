@@ -12,7 +12,7 @@
     <div class="content center half-width">
         <div class="oneux">ONEUX</div>
         <div class="solog">致力于商业体系的一致性体验</div>
-        <div class="buttom">进入规范</div>
+        <div class="buttom enter">进入规范</div>
     </div>
     <div class="side-nav">
         <!-- for: ${content.pages} as ${page},${index} -->

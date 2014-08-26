@@ -24,8 +24,8 @@ define( function (require, exports, module ) {
         $(document).scroll(function (e) {
             var ht = document.body.scrollTop;
             var diff = ht - prePos;
-            
-            if (e.timeStamp - timeStamp < 700) {
+
+            if (e.timeStamp - timeStamp < 600) {
                 return;
             }
             
@@ -61,6 +61,16 @@ define( function (require, exports, module ) {
                     }
                 );
             }
+        });
+
+        $('.enter').click(function (e) {
+            e.preventDefault();
+            $('#feature').scrollintoview(
+                {
+                    duration: 500,
+                    complete: updatePos 
+                }
+            );
         });
     }
 
