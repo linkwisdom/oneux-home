@@ -16,7 +16,7 @@ var systemConf = require('./systemConf');
 var homeBuilder = {
     name: 'homeBuilder',
     isExclude: function (file) {
-        if (file.extname == 'html') {
+        if (file.extname == 'html' || file.extname == 'tpl') {
             console.log(file.path);
             return false;
         }

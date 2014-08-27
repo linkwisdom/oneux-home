@@ -1,4 +1,4 @@
-@seaColor: rgba(69,147,255,0.7);
+@seaColor: #4593FF;
 
 body,
 #main {
@@ -13,7 +13,7 @@ body,
     line-height: 30px;
 
     &:nth-child(odd) {
-        background: #EEE;
+        background: #F3F3F3;
     }
 }
 
@@ -99,9 +99,12 @@ body,
     text-align: center;
     background: @seaColor !important;
 
-    a {
+    nav a {
+        &::first-child {
+            font-weight: bolder;
+        }
+
         color: #EEE;
-        margin: 10px;
     }
 
     .side-nav {
@@ -115,6 +118,8 @@ body,
 
         a {
             text-indent: 10000px;
+            color: #EEE;
+            margin: 10px;
             width: @readius;
             height: @readius;
             border: 2px solid @seaColor;
@@ -125,7 +130,7 @@ body,
 
             &:hover {
                 text-indent: @readius;
-                color: #000;
+                color: #333;
             }
         }
 
@@ -137,16 +142,22 @@ body,
         padding: 150px 20px 10px;
         color: #FFF;
         .oneux {
-            font-size: 8em;
+            font-size: 10em;
             height: 100px;
             display: inline-block;
             border-bottom: 1px solid #FFF;
+        }
+
+        em {
+            font-weight: lighter;
         }
     }
 
     .solog {
         line-height: 5em;
         min-width: 350px;
+        font-size: 20px;
+        letter-spacing: 0.2em;
         margin: 0 auto;
     }
 
@@ -165,7 +176,8 @@ body,
 
     .weight-line {
         color: rgb(69,147,255);
-        font-size: 20px;
+        font-size: 25px;
+        letter-spacing: 0.2em;
         height: 35vh;
     }
 
@@ -240,6 +252,7 @@ body,
 
 .fonticon-page {
     padding: 20px;
+    padding-top: 80px;
     background-color: #EEE;
     @left-width: 355px;
     @item-width: 90px;
@@ -267,6 +280,7 @@ body,
     .font-icon-list {
         background-color: #FFF;
         border: 1px solid #CCC;
+        margin-top: 80px;
     }
 }
 
