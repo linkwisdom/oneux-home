@@ -71,7 +71,7 @@ define(function (require) {
     }
 
     function changeContentByItem(data) {
-        var htmlPath = './src/module/' + data.item.value;
+        var htmlPath = window.modulePath + data.item.value;
         if (data.subItem) {
             htmlPath = htmlPath + '/' + data.subItem.value + '.html';
         } else {
