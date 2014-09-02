@@ -24,6 +24,7 @@ define( function (require, exports, module ) {
         $(document).scroll(function (e) {
             var ht = document.body.scrollTop;
             var diff = ht - prePos;
+           // var diffPage = Math.min(Math.round(Math.abs(diff / vh)), 1);
 
             if (e.timeStamp - timeStamp < 600) {
                 return;
