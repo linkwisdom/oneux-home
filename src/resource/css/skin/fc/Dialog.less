@@ -1,0 +1,57 @@
+/**
+ * @file ESUI.Dialog 弹框的皮肤
+ * @author Lingling Yan(yanlingling@baidu.com)
+ */
+@import './variable';
+
+.@{skin-fc-prefix}-dialog,
+.skin-confirm-dialog {
+    border: 0px;
+    border-radius: 0px;
+    &-head {
+        height: auto;
+        .ui-dialog-title {
+            padding-left: 20px;
+            font-size: 14px;
+            background: @skin-fc-bg-color-title-blue;
+            line-height: 40px;
+        }
+        .ui-dialog-close-icon {
+            background: none;
+            right: 20px;
+            top: 9px;
+            &:before {
+                #skin-fc-mixin > .use-font-icon(@font-icon-times);
+                font-size: 22px;
+            }
+        }
+        .ui-dialog-close-icon,
+        .font-icon {
+            &:before {
+                #skin-fc-mixin > .opacity(0.5);
+                color: @skin-fc-bg-color-white;
+            }
+            &:hover{
+                &:before {
+                    #skin-fc-mixin > .opacity(1);
+                }
+            }
+        }
+    }
+    &-foot-panel {
+        margin: 0;
+        padding: 20px;
+        .ui-dialog-foot {
+            float: left;
+            .ui-button {
+                height: @skin-fc-button-height;
+                line-height: @skin-fc-button-height;
+                font-weight: 400;
+                margin-left: 0;
+                margin-right: 10px;
+            }
+            .skin-spring-button:extend(.skin-ui-fc-important-button all) {}
+        }
+    }
+}
+

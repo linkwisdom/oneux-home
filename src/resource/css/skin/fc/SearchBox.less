@@ -1,0 +1,31 @@
+/**
+ * @file ESUI.SearchBox凤巢定制版皮肤
+ * @author Hao Zhang (zhanghao14)
+ */
+@import './mixin';
+@import './variable';
+@import "../../fcIcon/style";
+
+// SearchBox padding
+@skin-fc-searchbox-padding: 10px;
+
+.@{skin-fc-prefix}-searchbox {
+    .skin-search-button:extend(.font-icon) {
+        background-image: none;
+        text-indent: 0;
+        width: 20px;
+        height: 15px;
+        font-size: 16px;
+        padding-top: 5px;
+        padding-right: @skin-fc-searchbox-padding;
+    }
+    
+    .skin-search-button:before:extend(.font-icon-search:before) {
+        display: inline;
+        visibility: visible;
+    }
+    
+    .ui-textbox input {
+        padding-left: @skin-fc-searchbox-padding;
+    }
+}

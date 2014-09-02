@@ -64,14 +64,18 @@ define( function (require, exports, module ) {
             }
         });
 
+        // $('.enter').click(function (e) {
+        //     e.preventDefault();
+        //     $('#feature').scrollintoview(
+        //         {
+        //             duration: 500,
+        //             complete: updatePos 
+        //         }
+        //     );
+        // });
         $('.enter').click(function (e) {
             e.preventDefault();
-            $('#feature').scrollintoview(
-                {
-                    duration: 500,
-                    complete: updatePos 
-                }
-            );
+            location.href = location.href + 'oneux.html';
         });
     }
 
