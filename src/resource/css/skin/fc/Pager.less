@@ -1,0 +1,94 @@
+/**
+ * @file ESUI.Pager凤巢定制版皮肤
+ * @author William Wang(wangcunwei@baidu.com)
+ */
+
+@import './variable';
+
+.skin-ui-fc-pager-item-height () {
+    height: 28px;
+    line-height: 28px;
+}
+
+.skin-ui-fc-pager-item-width-height () {
+    .skin-ui-fc-pager-item-height();
+    
+    width: 30px;
+}
+
+.skin-ui-fc-pager-item-base () {
+    .skin-ui-fc-pager-item-width-height();
+  
+    background-color: @skin-fc-bg-color-gray;
+    border-color: @skin-fc-shadow-color;
+}
+
+.skin-ui-fc-pager-simple-item () {
+    border: none;
+    width: auto;
+}
+
+.@{skin-fc-prefix}-pager {
+    margin-top: 0;
+    .skin-ui-fc-pager-item-height();
+    
+    .@{skin-fc-prefix}-pager-select-wrapper {
+        .@{skin-fc-prefix}-pager-label {
+            margin-right: 10px;
+        }
+    }
+    
+    .@{skin-fc-prefix}-pager-main {
+        li {
+            margin: 0 5px;
+        }
+        
+        .@{skin-fc-prefix}-pager-item-omit {
+            width: 12px;
+            margin: 0;
+        }
+        
+        .@{skin-fc-prefix}-pager-item {
+            .skin-ui-fc-pager-item-base();
+            padding: 0;
+        }
+        
+        .@{skin-fc-prefix}-pager-item-extend {
+            .skin-ui-fc-pager-item-base();
+            
+            padding: 0 10px;
+            width: auto;
+        }
+        
+        .@{skin-fc-prefix}-pager-item-current {
+            .skin-ui-fc-pager-item-width-height();
+            
+            background-color: @skin-fc-bg-color-white;
+            border: 1px solid @skin-fc-text-color-blue;
+            border-radius: 2px;
+            color: @skin-fc-text-color-blue;
+        }
+    }
+}
+
+.@{skin-fc-prefix}-simple-pager {
+    .@{skin-fc-prefix}-pager-main {
+        li {
+            margin: 0;
+        }
+        
+        .@{skin-fc-prefix}-pager-item, .@{skin-fc-prefix}-pager-item-current {
+            .skin-ui-fc-pager-simple-item();
+            padding: 0 5px;
+        }
+        
+        .@{skin-fc-prefix}-pager-item-extend {
+            .skin-ui-fc-pager-simple-item();
+            padding: 0 25px;
+        }
+        
+        .@{skin-fc-prefix}-pager-item-omit {
+            padding: 0 5px;
+        }
+    }
+}

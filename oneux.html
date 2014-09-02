@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Leo Wang" />
+    <title>${system.title}</title>
+    <link rel="stylesheet" type="text/css" href="./src/resource/css/dep.less" />
+    <link rel="stylesheet" type="text/css" href="./src/resource/css/common.less" />
+    <link rel="stylesheet" type="text/css" href="./src/resource/css/page.less" />
+    <link rel="stylesheet" type="text/css" href="./src/resource/css/module.less" />
+    <script src="dep/esl/esl.js"></script>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="dep/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="src/common/lib/scrollView.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="side-nav-menu">
+            <ul>
+                <!-- for: ${menuItems.items} as ${menuItem} -->
+                <li class="menu-item">
+                    <span class="menu-item-name<!-- if: ${menuItem.selected} --> menu-item-selected<!-- /if -->" value="${menuItem.value}">${menuItem.name}</span>
+                    <ul>
+                        <!-- for: ${menuItem.subItems} as ${subMenuItem} -->
+                        <li class="sub-menu-item">
+                            <span class="sub-menu-item-name<!-- if: ${subMenuItem.selected} --> sub-menu-item-selected<!-- /if -->" value="${subMenuItem.value}">${subMenuItem.name}</span>
+                        </li>
+                        <!-- /for -->
+                    </ul>
+                </li>
+                <!-- /for -->
+            </ul>
+        </div>
+        <div class="content-area">
+            <header id="header" class="header">
+                <h1 class="logo">
+                    <div class="oneux">ONEUX</div>
+                </h1>
+                <nav>
+                    <!-- for: ${system.nav.links} as ${item},${index} -->
+                        <a href="${item.url}">${item.title}</a>
+                    <!-- /for -->
+                </nav>
+            </header>
+            <div class="modules-container">
+                <div id="oneux-modules-title-bar" class="title-bar">
+                    <!-- for: ${menuItems.items} as ${menuItem} -->
+                        <!-- if: ${menuItem.selected} -->
+                            ${menuItem.name}
+                            <!-- for: ${menuItem.subItems} as ${subMenuItem} -->
+                                <!-- if: ${subMenuItem.selected} -->
+                                    > ${subMenuItem.name}
+                                <!-- /if -->
+                            <!-- /for -->
+                        <!-- /if -->
+                    <!-- /for -->
+                </div>
+                <div id="oneux-modules-container">
+                    <iframe src="./src/module/esui/calendar.html" height="100%" width="100%" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        &copy;2014 ${system.orgization}
+        <p>
+            <a href="http://github.com/fcfe" target="_blank" title="GitHub"><i class="fa fa-github-square"></i></a>
+            <a href="mailto:fc-fe@baidu.com" target="_blank" title="邮件"><i class="fa fa-envelope-o"></i></a>
+        </p>
+    </footer>
+    <script>
+        require.config({
+            'baseUrl': 'src',
+            'paths': {},
+            'packages': [
+                {
+                    'name': 'er',
+                    'location': '../dep/er/3.1.0-beta.3/src',
+                    'main': 'main'
+                },
+                {
+                    'name': 'etpl',
+                    'location': '../dep/etpl/2.1.0/src',
+                    'main': 'main'
+                },
+                {
+                    'name': 'mini-event',
+                    'location': '../dep/mini-event/1.0.0/src',
+                    'main': 'main'
+                },
+                {
+                    'name': 'esui',
+                    'location': '../dep/esui/3.1.0-beta.3/src',
+                    'main': 'main'
+                },
+                {
+                    'name': 'moment',
+                    'location': '../dep/moment/2.0.1/src',
+                    'main': 'moment'
+                },
+                {
+                    'name': 'underscore',
+                    'location': '../dep/underscore/1.5.2/src',
+                    'main': 'underscore'
+                }
+            ]
+        });
+
+        require(['module/main']);
+    </script>
+</body>
+</html>

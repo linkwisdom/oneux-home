@@ -1,0 +1,39 @@
+/**
+ * @file ESUI.TipLayer凤巢定制版皮肤
+ * @author Chong Chen (chenchong02@baidu.com)
+ */
+
+@import './mixin';
+@import './variable';
+@import '../../fcIcon/style';
+
+.@{skin-fc-prefix}-tiplayer {
+    /**
+     * tipLayer的宽度设定是通过tip中通过layerWidth属性指定的，因此此处需通过
+     *     important强制将其width设置成auto
+     * tip中设置tipLayer具体代码如下(Tip.js 136行):
+     *     width: this.layerWidth || 200
+     */
+    #skin-fc-mixin > .box-shadow(0px 1px 3px @skin-fc-shadow-color);
+    width: auto !important;
+    max-width: 200px;
+    padding: 10px;
+    background-color: @skin-fc-bg-color-white;
+    border-color: @skin-fc-text-color-gray-light;
+
+    &-title {
+        margin: 0;
+        padding: 0 0 10px;
+    }
+
+    &-body {
+        margin: 0;
+        padding: 0;
+        line-height: normal;
+        word-break: break-all;
+    }
+
+    &-arrow {
+        display: none;
+    }    
+}

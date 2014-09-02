@@ -1,0 +1,54 @@
+/**
+ * @file ESUI.Tab凤巢定制版皮肤
+ * @author Hao Zhang (zhanghao14)
+ */
+
+@import './mixin';
+@import './variable';
+
+// Tab高度
+@skin-fc-tab-height: 50px;
+
+.set-tab-colors(@background-color; @border-color; @text-color) {
+    background: @background-color;
+    border-color: @border-color;
+    color: @text-color;
+}
+
+.skin-ui-fc-tab-height (@tab-height) {
+    height: @tab-height;
+    line-height: @tab-height;
+}
+
+.set-tab(
+    @background-color: @skin-fc-bg-color-gray;
+    @border-color: @skin-fc-text-color-gray-light;
+    @text-color: @skin-fc-text-color-gray-dark;
+    @tab-height: @skin-fc-tab-height;
+) {
+    .set-tab-colors(@background-color; @border-color; @text-color);
+    .skin-ui-fc-tab-height(@tab-height);
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.skin-ui-fc-tab {
+    .set-tab;
+}
+
+.skin-ui-fc-tab-horizontal {
+    .ui-tab-navigator {
+        padding-left: 0;
+        border-bottom: hidden;
+    }
+
+    .ui-tab-item {
+        padding: 0 20px;
+        margin-right: 0;
+    }
+
+    .ui-tab-item-active {
+        border-top: @skin-fc-bg-color-blue 2px solid;
+    }
+}

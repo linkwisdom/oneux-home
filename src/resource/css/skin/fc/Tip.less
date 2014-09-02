@@ -1,0 +1,55 @@
+/**
+ * @file ESUI.Tip凤巢定制版皮肤
+ * @author Chong Chen (chenchong02@baidu.com)
+ */
+@import './variable';
+@import './mixin';
+@import '../../fcIcon/style';
+
+.set-color(
+    @hover-font-color: @skin-fc-bg-color-blue;
+    @active-font-color: @skin-fc-bg-color-blue;
+) {
+    &:hover {
+        color: @hover-font-color
+    }
+
+    &:active {
+        color: @active-font-color
+    }
+}
+@warn-tip-color: #FC9300;
+
+.@{skin-fc-prefix}-tip,
+.@{skin-fc-prefix}-warn-tip {
+    &:hover {
+        cursor: default;
+    }
+    background-image: none;
+    padding-bottom: 4px;
+    width: 16px;
+    height: 16px;
+}
+
+.@{skin-fc-prefix}-tip {
+    .set-color(
+        @hover-font-color: @skin-fc-bg-color-blue;
+        @active-font-color: @skin-fc-bg-color-blue;
+    );
+}
+
+.@{skin-fc-prefix}-warn-tip {
+    color: @warn-tip-color;
+    .set-color(
+        @hover-font-color: @warn-tip-color;
+        @active-font-color: @warn-tip-color;
+    );
+}
+
+.@{skin-fc-prefix}-tip:before {
+    #skin-fc-mixin > .use-font-icon(@font-icon-hint-info-s);
+}
+
+.@{skin-fc-prefix}-warn-tip:before {
+    #skin-fc-mixin > .use-font-icon(@font-icon-hint-exclamation-s);
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ESUI-Calendar</title>
+    <link href="../../../dep/esui/3.1.0-beta.3/src/css/main.less" rel="stylesheet" />
+    <link rel="stylesheet" href="../../resource/css/skin/fc.less" />
+    <link rel="stylesheet" href="../../resource/css/fcIcon/fc-icon.less" />
+    <script src="http://s1.bdstatic.com/r/www/cache/ecom/esl/1-6-10/esl.js"></script>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="../../../dep/google-code-prettify/prettify.js"></script>
+    <script>
+        require.config({
+            'baseUrl': '../../../src',
+            'paths': {},
+            'packages': [
+                {
+                    'name': 'mini-event',
+                    'location': '../dep/mini-event/1.0.0/src',
+                    'main': 'main'
+                },
+                {
+                    'name': 'underscore',
+                    'location': '../dep/underscore/1.5.2/src',
+                    'main': 'underscore'
+                },
+                {
+                    'name': 'moment',
+                    'location': '../dep/moment/2.0.1/src',
+                    'main': 'moment'
+                },
+                {
+                    'name': 'etpl',
+                    'location': '../dep/etpl/2.1.0/src',
+                    'main': 'main'
+                },
+                {
+                    'name': 'esui',
+                    'location': '../dep/esui/3.1.0-beta.3/src',
+                    'main': 'main'
+                }
+            ]
+        });
+    </script>
+</head>
+<body>
+    <h1>地域</h1>
+    <p>地域选择控件适用于用户选择推广地域，可以支持省市粒度的选择。涵盖两种选择方式，多选和单选。多选支持到市级选择。单选包括省级单选、市级单选及省市混合单选。</p>
+    <h2>地域多选</h2>
+    <p>可以选择国内及国外的多个地区、省、市，且支持同时选择多个。支持分地区全选或单个省市选择。</p>
+    <p>多选需要点击确认或取消后完成控件操作，浮层消失。</p>
+    <div data-ui-type="Region" data-ui-id="demoRegion"></div>
+    <h2>省级单选</h2>
+    <p>可以选择国内省级及国外国家，且只支持单个选择。</p>
+    <p>在点击单个选项后完成控件操作，浮层消失。</p>
+    <div data-ui-type="Region" data-ui-id="demoSingleRegion" data-ui-mode="single"></div>
+
+    <script>
+        var modules = [
+            'esui',
+            'esui/Region',
+            'common/ui/extension/FcUiSkin'
+        ];
+        require(modules, function (esui) {
+            esui.attachExtension('FcUiSkin');
+
+            esui.init(document.body);
+        });
+    </script>
+</body>
+</html>

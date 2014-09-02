@@ -4,7 +4,7 @@ exports.system = {
     nav: {
         links: [
             { url: '#xxx', title: '首页' },
-            { url: '#xxx', title: '规范' },
+            { url: './oneux.html', title: '规范' },
             { url: '#xxx', title: '使用指南' },
             { url: '#xxx', title: '应用场景' },
             { url: '#xxx', title: '关于我们' }
@@ -25,4 +25,55 @@ exports.content = {
 
 exports.page = {
     content: '正文内容'
-}
+};
+
+exports.menuItems = {
+    items: [
+        {
+            name: '控件规范',
+            value: 'esui',
+            subItems: [
+                {
+                    name: '日历',
+                    value: 'calendar',
+                    selected: true
+                },
+                {
+                    name: '地域',
+                    value: 'region'
+                },
+                {
+                    name: '按钮',
+                    value: 'button'
+                },
+                {
+                    name: '下拉菜单',
+                    value: 'select'
+                },
+            ],
+            selected: true
+        },
+        {
+            name: '风格规范',
+            value: 'style',
+            subItems: [
+                {
+                    name: '色彩',
+                    value: 'color'
+                },
+                {
+                    name: '字体',
+                    value: 'font'
+                },
+                {
+                    name: '图标',
+                    value: 'icon'
+                }
+            ]
+        },
+        {
+            name: '页面规范',
+            value: 'page'
+        }
+    ]
+};
