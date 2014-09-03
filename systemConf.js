@@ -3,11 +3,11 @@ exports.system = {
     orgization: '百度商业平台研发部前端团队',
     nav: {
         links: [
-            { url: '#xxx', title: '首页' },
+            { url: '/oneux', title: '首页' },
             { url: './oneux.html', title: '规范' },
-            { url: '#xxx', title: '使用指南' },
-            { url: '#xxx', title: '应用场景' },
-            { url: '#xxx', title: '关于我们' }
+            { url: '/oneux/guide.html', title: '使用指南' },
+            { url: '/oneux/scense.html', title: '应用场景' },
+            { url: 'http://fcfe.github.io/', title: '关于我们' }
         ]
     }
 };

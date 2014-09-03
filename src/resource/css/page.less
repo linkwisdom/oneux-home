@@ -8,6 +8,33 @@ body,
     padding: 0;
 }
 
+.lighting(@width:500px, @height: 150px) {
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: @width;
+        height: @height;
+        top: 0;
+        right: 600px;
+        display: inline-block;
+        background-image: -moz-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
+        background-image: -webkit-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
+        transform: skewx(-25deg);
+    };
+
+    &:hover {
+        text-shadow: 0 0 15px #13313A;
+        transition: 1.5s;
+        &::after {
+            right: 0px - @width;
+            transition: 1.5s;
+        };
+    };
+}
+
 .page {
     height: 100vh;
     line-height: 30px;
@@ -28,6 +55,7 @@ body,
 
 .oneux {
     display: inline-block;
+    text-shadow: 0 0 5px #EEE;
 }
 
 .weight-line {
@@ -94,6 +122,8 @@ body,
     }
 }
 
+
+
 .index-page {
     font-size: 16px;
     text-align: center;
@@ -139,13 +169,20 @@ body,
     }
 
     .content {
+        @oneux-height: 150px;
+        @oneux-width: 500px;
+
         padding: 150px 20px 10px;
         color: #FFF;
+
         .oneux {
-            font-size: 10em;
-            height: 100px;
+            font-size: @oneux-height;
+            height: @oneux-height;
+            line-height: @oneux-height;
+            width: @oneux-width + 50px;
             display: inline-block;
             border-bottom: 1px solid #FFF;
+            .lighting(@oneux-width, @oneux-height);
         }
 
         em {
@@ -281,6 +318,12 @@ body,
         background-color: #FFF;
         border: 1px solid #CCC;
         margin-top: 80px;
+
+        .fa {
+            &:hover {
+                color: @seaColor;
+            };
+        }
     }
 }
 
@@ -295,4 +338,31 @@ body,
         background-image: url(../img/application.png);
     }
 }
+
+.overimg {
+    position: relative;
+    display: block;
+    text-shadow: 0 0 10px #FFF;
+    transition: 0.5s;
+}
+
+.index-page {
+    .light {    
+        background-image: -moz-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
+        background-image: -webkit-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
+        transform: skewx(-25deg);
+        -o-transform: skewx(-25deg);
+        -moz-transform: skewx(-25deg);
+        -webkit-transform: skewx(-25deg);
+
+        .index-page:hover {
+            -moz-transition: 0.5s;
+            -o-transition: 0.5s;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+        }
+    }
+}
+
+
 

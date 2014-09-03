@@ -29,34 +29,34 @@
             <i class="fa fa-cloud"></i>
         </li>
         <li>
-            <i class="fa fa-phone"></i>
+            <i class="fa fa-adjust"></i>
         </li>
         <li>
-            <i class="fa fa-flag"></i>
+            <i class="fa fa-asterisk"></i>
         </li>
         <li>
-            <i class="fa fa-folder"></i>
-        </li>
-        <li>
-            <i class="fa fa-circle"></i>
+            <i class="fa fa-beer"></i>
         </li>
         <li>
             <i class="fa fa-cloud"></i>
         </li>
         <li>
-            <i class="fa fa-phone"></i>
+            <i class="fa fa-eye"></i>
         </li>
         <li>
-            <i class="fa fa-flag"></i>
+            <i class="fa fa-filter"></i>
         </li>
         <li>
-            <i class="fa fa-folder"></i>
+            <i class="fa fa-exchange"></i>
         </li>
         <li>
             <i class="fa fa-circle"></i>
         </li>
         <li>
-            <i class="fa fa-cloud"></i>
+            <i class="fa fa-magic"></i>
+        </li>
+        <li>
+            <i class="fa fa-plane"></i>
         </li>
     </ul>
 </div>
